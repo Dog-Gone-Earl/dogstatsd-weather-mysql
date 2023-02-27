@@ -26,4 +26,4 @@ pip install mysql-connector-python
 
 echo "Retrieving Python file"
 sleep 5
-curl -o weather.py https://raw.githubusercontent.com/Dog-Gone-Earl/dogstatsd-weather-sim-app/main/weather_code.py
+curl -o weather.py https://raw.githubusercontent.com/Dog-Gone-Earl/dogstatsd-weather-mysql/main/dsd_weather.py
