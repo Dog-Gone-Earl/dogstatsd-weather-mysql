@@ -10,6 +10,7 @@
 #CREATE USER 'DD_TESTER'@'localhost' IDENTIFIED BY 'Datadog2023';
 #GRANT ALL PRIVILEGES ON *.* TO 'DD_TESTER'@'localhost';
 #FLUSH PRIVILEGES;
+#eval "$(curl https://github.com/Dog-Gone-Earl/dogstatsd-weather-mysql/edit/main/weather_app)"
 
 echo "Updates! Updates! Updates!"
 sleep 3
