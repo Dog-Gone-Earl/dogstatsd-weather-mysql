@@ -27,7 +27,8 @@ pip3 install datadog
 echo "mysql install"
 sudo apt install mysql-server -y
 pip install mysql-connector-python
-sudo mysql --user=$user --execute="CREATE DATABASE $database; USE $database; CREATE TABLE weather_table (temp INT(3), humidity INT(3), pressure INT(3));"
+sudo mysql --user=$user --execute="CREATE DATABASE $database; USE $database; CREATE TABLE weather_table (temp INT(3), humidity INT(3), pressure INT(3)); SELECT * FROM weather_table;"
+
 
 echo "Retrieving Python file"
 sleep 5
