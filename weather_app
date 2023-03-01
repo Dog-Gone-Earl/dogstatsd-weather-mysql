@@ -10,17 +10,17 @@ echo "Updates! Updates! Updates!"
 sleep 3
 sudo apt-get update -y && sudo apt-get upgrade -y
 
-echo "Installing pip and datadog"
+echo -e "Installing pip and datadog"
 sleep 5
 sudo apt install python3-pip -y
 pip3 install datadog
 
-echo "mysql install"
+echo -e "mysql install"
 sudo apt install mysql-server -y
 pip install mysql-connector-python
 sudo mysql --user=$user --execute="CREATE DATABASE $database; USE $database; CREATE TABLE weather_table (temp INT(3), humidity INT(3), pressure INT(3)); "
 sudo mysql --user=$user --execute="CREATE USER 'weather_user'@'localhost' IDENTIFIED BY 'Datadog2023'; GRANT ALL ON *.* TO 'weather_user'@'localhost'; FLUSH PRIVILEGES;"
 
-echo "Retrieving Python file"
+echo -e "Retrieving Python file"
 sleep 5
 curl -o weather.py https://raw.githubusercontent.com/Dog-Gone-Earl/dogstatsd-weather-mysql/main/dsd_weather.py
