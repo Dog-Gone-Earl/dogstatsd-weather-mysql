@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-#sudo mysql
-#CREATE DATABASE weather_stats;
-#use weather_stats;
-#CREATE TABLE weather_data (temp INT(3), humidity INT(3), pressure INT(3));
-#show tables;
-#describe weather_data;
-#use weather_stats;
-#CREATE USER 'DD_TESTER'@'localhost' IDENTIFIED BY 'Datadog2023';
-#GRANT ALL PRIVILEGES ON *.* TO 'DD_TESTER'@'localhost';
 #FLUSH PRIVILEGES;
 #eval "$(curl https://raw.githubusercontent.com/Dog-Gone-Earl/dogstatsd-weather-mysql/main/weather_app)"
 
@@ -28,7 +19,7 @@ echo "mysql install"
 sudo apt install mysql-server -y
 pip install mysql-connector-python
 sudo mysql --user=$user --execute="CREATE DATABASE $database; USE $database; CREATE TABLE weather_table (temp INT(3), humidity INT(3), pressure INT(3)); "
-sudo mysql --user=$user --execute="CREATE USER 'weather_user'@'localhost' IDENTIFIED BY 'Datadog2023'; GRANT ALL ON *.* TO 'weather_user'@'localhost';"
+sudo mysql --user=$user --execute="CREATE USER 'weather_user'@'localhost' IDENTIFIED BY 'Datadog2023'; GRANT ALL ON *.* TO 'weather_user'@'localhost'; FLUSH PRIVILEGES;"
 
 echo "Retrieving Python file"
 sleep 5
