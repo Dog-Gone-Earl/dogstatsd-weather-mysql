@@ -43,7 +43,7 @@ while True:
   cnx = mysql.connector.connect(user='weather_user', password='Datadog2023', database= 'weather_database')
   cursor = cnx.cursor()
   
-  add_weather = ("INSERT INTO weather_data " "(temp,humidity,pressure) " "VALUES ( %(temp)s, %(humidity)s, %(pressure)s)")
+  add_weather = ("INSERT INTO weather_table " "(temp,humidity,pressure) " "VALUES ( %(temp)s, %(humidity)s, %(pressure)s)")
   
   data_weather = {
     'temp' : temperature,
