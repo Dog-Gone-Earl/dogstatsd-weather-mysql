@@ -58,5 +58,6 @@ while True:
   cursor.close()
   cnx.close()
 
+  print(temperature, humidity, pressure)
 
   time.sleep(10)
