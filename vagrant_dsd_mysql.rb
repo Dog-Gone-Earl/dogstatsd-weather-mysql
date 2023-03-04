@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", privileged: true, inline: <<-SHELL
   sudo apt-get update
   yes y | sudo apt-get upgrade
-  DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=f0ae70a3704461c8bf18397051cc4ae4 DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+  DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=<api_key> DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
   
   user=root
   database=weather_database
