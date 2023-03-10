@@ -42,8 +42,6 @@ Vagrant.configure("2") do |config|
   sleep 3
   curl -o weather.py https://raw.githubusercontent.com/Dog-Gone-Earl/dogstatsd-weather-mysql/main/dsd_weather.py
 
-
-
   echo "\n""\e[4mComponents Completed/Installed:\e[0m" "\nLinux Updates" "\nPip Install" "\nDatadog Python Module Install" "\nMysql Install" "\nMysql-connect Python Module Install" "\nCreate 'weather_database' Database in Mysql" "\nCreate 'weather_table' Table in 'weather_database' Database" "\nGrant permission to datadog user to host Database" "\nGrant permissions for Agent to Collect Mysql metrics/DBM" "\nCurl 'Weather App Python' File"
   SHELL
 end
